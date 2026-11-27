@@ -3,4 +3,6 @@
 /content/systems/   @your-org/design-office
 /content/guidance/  @your-org/sheq
 /content/projects/  @your-org/contracts
-/hub/ /templates/ /.github/  @your-org/hub-maintainers
+/hub/       @your-org/hub-maintainers
+/templates/ @your-org/hub-maintainers
+/.github/   @your-org/hub-maintainers

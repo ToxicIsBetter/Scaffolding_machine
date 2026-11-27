@@ -2,7 +2,7 @@
   "name": "Scaffold Knowledge Hub",
   "organisation": "Alandale Scaffolding",
   "tagline": "Every scaffold system, standard and project - in one place.",
-  "repo": "",
+  "repo": "https://github.com/ToxicIsBetter/Scaffolding_machine",
   "branch": "main",
   "notice": "Prototype for demonstration. Project records are sample data. Technical content must be checked by a competent person against the current edition of each standard before use."
 }
