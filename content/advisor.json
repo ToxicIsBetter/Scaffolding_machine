@@ -1,0 +1,491 @@
+{
+  "_help": "Scaffold Advisor knowledge. 'factors' are things the advisor listens for in a description (keywords) and can ask about (groups). Each scaffold system says which factors it suits / avoids / requires in its own front matter. Weight = how much a factor counts toward a recommendation.",
+  "factors": [
+    {
+      "id": "facade",
+      "label": "Façade / external wall work",
+      "reason": "the work is on the building's elevations",
+      "weight": 3,
+      "keywords": [
+        "facade",
+        "façade",
+        "elevation",
+        "elevations",
+        "brickwork",
+        "bricklaying",
+        "render",
+        "rendering",
+        "cladding",
+        "window",
+        "windows",
+        "window replacement",
+        "painting",
+        "repaint",
+        "repointing",
+        "repoint",
+        "external wall",
+        "external walls",
+        "stone repair",
+        "stone repairs",
+        "stonework",
+        "masonry repairs",
+        "insulation",
+        "ewi"
+      ]
+    },
+    {
+      "id": "reroof",
+      "label": "Re-roofing / roof works",
+      "reason": "it's roof work",
+      "weight": 3,
+      "keywords": [
+        "re-roof",
+        "reroof",
+        "re-roofing",
+        "reroofing",
+        "roof replacement",
+        "replace the roof",
+        "new roof",
+        "roofing",
+        "roof works",
+        "roof repair",
+        "roof repairs",
+        "slates",
+        "chimney",
+        "chimneys",
+        "gutters",
+        "guttering"
+      ]
+    },
+    {
+      "id": "internal_high",
+      "label": "Internal high-level work",
+      "reason": "the work is inside, at high level",
+      "weight": 3,
+      "keywords": [
+        "ceiling",
+        "ceilings",
+        "internal",
+        "inside",
+        "interior",
+        "atrium",
+        "hall",
+        "nave",
+        "auditorium",
+        "theatre",
+        "warehouse roof from below",
+        "from below",
+        "high level",
+        "lighting",
+        "light fittings",
+        "soffit lining"
+      ]
+    },
+    {
+      "id": "over_void",
+      "label": "Over a road, water, railway or void",
+      "reason": "there's nothing to build up from - it spans a road, water or void",
+      "weight": 4,
+      "keywords": [
+        "bridge",
+        "viaduct",
+        "over water",
+        "over the river",
+        "river",
+        "canal",
+        "over a road",
+        "over the road",
+        "railway",
+        "rail line",
+        "void",
+        "lift shaft",
+        "stairwell void",
+        "underside of",
+        "arch soffit"
+      ]
+    },
+    {
+      "id": "ground_ok",
+      "label": "Firm ground available below",
+      "reason": "it can stand on firm ground",
+      "weight": 1,
+      "keywords": [
+        "firm ground",
+        "good ground",
+        "garden",
+        "yard",
+        "car park",
+        "hardstanding",
+        "level ground"
+      ]
+    },
+    {
+      "id": "no_ground",
+      "label": "Ground below can't be used",
+      "reason": "the ground below can't be used",
+      "weight": 3,
+      "keywords": [
+        "no ground",
+        "can't use the ground",
+        "cannot use the ground",
+        "pavement must stay clear",
+        "keep the pavement clear",
+        "pavement clear",
+        "can't block",
+        "cannot block",
+        "upper floors",
+        "upper floors only",
+        "top floors only",
+        "lower roof",
+        "over a roof",
+        "canopy",
+        "conservatory",
+        "no room at ground",
+        "no access at ground",
+        "basement vaults",
+        "vaults below"
+      ]
+    },
+    {
+      "id": "public_below",
+      "label": "Public pass below or beside",
+      "reason": "the public pass below or beside it",
+      "weight": 1,
+      "keywords": [
+        "pavement",
+        "footpath",
+        "footway",
+        "street",
+        "high street",
+        "busy road",
+        "main road",
+        "public",
+        "pedestrians",
+        "highway",
+        "shop front",
+        "shops",
+        "entrance",
+        "city centre",
+        "town centre"
+      ]
+    },
+    {
+      "id": "private_site",
+      "label": "Closed private site",
+      "reason": "the site is closed to the public",
+      "weight": 0,
+      "keywords": [
+        "private site",
+        "closed site",
+        "no public",
+        "behind hoarding",
+        "back garden",
+        "rear garden",
+        "inside the site"
+      ]
+    },
+    {
+      "id": "weather",
+      "label": "Must stay dry / work in all weather",
+      "reason": "the building must stay dry and work must continue in bad weather",
+      "weight": 1,
+      "keywords": [
+        "occupied",
+        "residents",
+        "tenants",
+        "keep dry",
+        "watertight",
+        "weather",
+        "weatherproof",
+        "rain",
+        "winter",
+        "stay in their homes",
+        "living in",
+        "people living",
+        "temporary roof",
+        "open to the elements"
+      ]
+    },
+    {
+      "id": "heavy_materials",
+      "label": "Heavy materials landed",
+      "reason": "heavy materials will be landed on the scaffold",
+      "weight": 1,
+      "keywords": [
+        "brickwork",
+        "bricklaying",
+        "bricks",
+        "blockwork",
+        "blocks",
+        "slates",
+        "tiles",
+        "pallets",
+        "crane",
+        "materials",
+        "loading"
+      ]
+    },
+    {
+      "id": "many_trades",
+      "label": "Large site / many trades",
+      "reason": "lots of people will use it",
+      "weight": 1,
+      "keywords": [
+        "many trades",
+        "multiple trades",
+        "large site",
+        "big site",
+        "lots of workers",
+        "large workforce",
+        "new build",
+        "new-build",
+        "development"
+      ]
+    },
+    {
+      "id": "irregular",
+      "label": "Irregular / heritage building",
+      "reason": "the building is irregular or historic",
+      "weight": 1,
+      "keywords": [
+        "victorian",
+        "georgian",
+        "edwardian",
+        "heritage",
+        "listed",
+        "grade ii",
+        "church",
+        "cathedral",
+        "irregular",
+        "bay window",
+        "bay windows",
+        "complex shape",
+        "curved",
+        "old building",
+        "period",
+        "conservation area",
+        "cornice",
+        "cornices"
+      ]
+    },
+    {
+      "id": "repetitive",
+      "label": "Regular / repetitive elevations",
+      "reason": "the elevations are regular and repetitive",
+      "weight": 1,
+      "keywords": [
+        "new build",
+        "new-build",
+        "housing estate",
+        "estate",
+        "block of flats",
+        "repetitive",
+        "modern",
+        "flat elevation",
+        "flat elevations",
+        "apartment block",
+        "residential block",
+        "office block"
+      ]
+    },
+    {
+      "id": "short_duration",
+      "label": "Short job (days)",
+      "reason": "it's a short job",
+      "weight": 3,
+      "keywords": [
+        "one day",
+        "a day",
+        "two days",
+        "few days",
+        "a couple of days",
+        "quick",
+        "short job",
+        "short-term",
+        "short term",
+        "one-off",
+        "maintenance",
+        "inspection",
+        "survey",
+        "change a bulb",
+        "small repair"
+      ]
+    },
+    {
+      "id": "long_duration",
+      "label": "Long job (weeks or months)",
+      "reason": "it will be up for weeks or months",
+      "weight": 1,
+      "keywords": [
+        "months",
+        "weeks",
+        "long term",
+        "long-term",
+        "year",
+        "phased",
+        "programme"
+      ]
+    },
+    {
+      "id": "low",
+      "label": "Low rise (under 10 m)",
+      "reason": "it's low rise",
+      "weight": 1,
+      "keywords": [
+        "house",
+        "houses",
+        "bungalow",
+        "terrace",
+        "terraced",
+        "semi",
+        "semi-detached",
+        "detached",
+        "cottage",
+        "two storey",
+        "single storey",
+        "school",
+        "shop"
+      ]
+    },
+    {
+      "id": "mid",
+      "label": "Mid rise (10-30 m)",
+      "reason": "it's mid rise",
+      "weight": 1,
+      "keywords": []
+    },
+    {
+      "id": "high",
+      "label": "High rise (over 30 m)",
+      "reason": "it's high rise",
+      "weight": 1,
+      "keywords": [
+        "tower",
+        "high rise",
+        "high-rise",
+        "tower block",
+        "skyscraper"
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "id": "work",
+      "question": "What's the main work the scaffold is for?",
+      "ask": true,
+      "options": [
+        "facade",
+        "reroof",
+        "internal_high",
+        "over_void",
+        "short_duration"
+      ]
+    },
+    {
+      "id": "ground",
+      "question": "Can the scaffold stand on the ground directly below the work?",
+      "ask": true,
+      "options": [
+        "ground_ok",
+        "no_ground",
+        "over_void"
+      ],
+      "labels": {
+        "ground_ok": "Yes - firm ground",
+        "no_ground": "No - pavement/roof can't be used",
+        "over_void": "Nothing below - road, water or void"
+      },
+      "ask_unless": [
+        "internal_high",
+        "short_duration",
+        "over_void"
+      ]
+    },
+    {
+      "id": "public",
+      "question": "Will the public be passing below or beside it?",
+      "ask": true,
+      "options": [
+        "public_below",
+        "private_site"
+      ],
+      "labels": {
+        "public_below": "Yes - pavement or street",
+        "private_site": "No - closed site"
+      },
+      "ask_unless": [
+        "internal_high",
+        "private_site"
+      ],
+      "exclusive": true
+    },
+    {
+      "id": "weather",
+      "question": "Does the building need to stay dry while you work (e.g. occupied, roof open)?",
+      "ask": true,
+      "ask_if": [
+        "reroof"
+      ],
+      "options": [
+        "weather"
+      ],
+      "labels": {
+        "weather": "Yes - keep it dry"
+      }
+    },
+    {
+      "id": "height",
+      "question": "Roughly how tall does it need to go?",
+      "ask": true,
+      "exclusive": true,
+      "ask_unless": [
+        "internal_high",
+        "short_duration"
+      ],
+      "options": [
+        "low",
+        "mid",
+        "high"
+      ],
+      "labels": {
+        "low": "Under 10 m (1-3 storeys)",
+        "mid": "10-30 m",
+        "high": "Over 30 m"
+      }
+    },
+    {
+      "id": "shape",
+      "question": "What's the building like?",
+      "ask": true,
+      "exclusive": true,
+      "ask_if": [
+        "facade",
+        "reroof"
+      ],
+      "options": [
+        "irregular",
+        "repetitive"
+      ],
+      "labels": {
+        "irregular": "Irregular / period / heritage",
+        "repetitive": "Regular / modern"
+      },
+      "ask_unless": [
+        "no_ground",
+        "over_void",
+        "internal_high",
+        "short_duration"
+      ]
+    },
+    {
+      "id": "extras",
+      "question": "Anything else?",
+      "ask": false,
+      "options": [
+        "heavy_materials",
+        "many_trades",
+        "long_duration"
+      ]
+    }
+  ]
+}

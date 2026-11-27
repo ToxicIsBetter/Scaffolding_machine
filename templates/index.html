@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}}</title>
+<meta name="description" content="Scaffold systems, standards, procedures and project records in one searchable place.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231d2430'/%3E%3Cpath d='M8 5v22M16 5v22M24 5v22M5 11h22M5 21h22M8 21l8-10M16 21l8-10' stroke='%23f2a900' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>{{STYLE}}</style>
+</head>
+<body>
+<a class="skip" href="#app">Skip to content</a>
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="brand" href="#/" aria-label="Home">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 5v22M16 5v22M24 5v22M5 11h22M5 21h22M8 21l8-10M16 21l8-10"/></svg>
+      <span><b id="brand-name"></b><small id="brand-org"></small></span>
+    </a>
+    <nav id="nav" aria-label="Sections"></nav>
+    <div class="search">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+      <input id="q" type="search" placeholder="Search systems, standards, projects…" autocomplete="off" aria-label="Search">
+      <kbd>/</kbd>
+    </div>
+    <button id="theme" class="icon-btn" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+</header>
+<main id="app" class="wrap" tabindex="-1"></main>
+<footer class="wrap foot" id="foot"></footer>
+<a id="advisor-fab" class="fab" href="#/advisor" hidden>💬 <span>Scaffold Advisor</span></a>
+<script type="application/json" id="hub-data">{{DATA}}</script>
+<script>{{SCRIPT}}</script>
+</body>
+</html>

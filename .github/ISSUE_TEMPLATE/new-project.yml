@@ -1,0 +1,29 @@
+name: Add a project record
+description: Capture a new or completed job so the next team can learn from it.
+labels: [new-project]
+body:
+  - type: input
+    id: title
+    attributes: { label: Project name and location }
+    validations: { required: true }
+  - type: dropdown
+    id: status
+    attributes:
+      label: Status
+      options: [Tendering, Live, Completed]
+    validations: { required: true }
+  - type: textarea
+    id: systems
+    attributes:
+      label: Scaffold systems used
+      description: e.g. independent tied tube and fitting, temporary roof, loading bay
+  - type: textarea
+    id: docs
+    attributes:
+      label: Key document references
+      description: Design refs, handover certificates, licences
+  - type: textarea
+    id: lessons
+    attributes:
+      label: Lessons learned
+      description: What would you tell the next team doing a similar job?

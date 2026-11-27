@@ -1,0 +1,23 @@
+name: Something is wrong or out of date
+description: Flag an error, an outdated standard, or missing information on a hub page.
+labels: [content]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Which page?
+      description: Paste the link or the page title.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's wrong?
+      placeholder: e.g. "TG20 has a new edition", "Lead time for this borough is now 8 weeks"
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Source / evidence (optional)
+      description: A link, a document reference, or "from site experience on job X".

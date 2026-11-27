@@ -1,0 +1,20 @@
+[
+  { "say": "Re-roof of a Victorian terrace on a busy street, residents staying in",
+    "top": ["tube-and-fitting", "independent-tied"], "addons": ["temporary-roof", "protection-fan", "loading-bay"],
+    "not_top": ["kwikstage", "cuplok"] },
+  { "say": "Stone repairs on the upper floors of a city office - the pavement must stay clear",
+    "top": ["cantilever"], "addons": ["protection-fan"], "unsuitable": ["independent-tied"] },
+  { "say": "Repoint the brick arch soffit of a railway bridge over a road",
+    "top": ["suspended"], "unsuitable": ["independent-tied"] },
+  { "say": "Replace the plaster ceiling in a church nave, about 15m high, over several weeks",
+    "top": ["birdcage"] },
+  { "say": "Change the light fittings in a school hall, two days",
+    "top": ["mobile-access-tower"] },
+  { "say": "Brickwork and windows on a 16 storey new build residential block",
+    "top": ["multidirectional-system"], "addons": ["stair-tower", "loading-bay"], "unsuitable": ["kwikstage"] },
+  { "say": "Rendering a modern 2 storey housing estate, private site behind hoarding",
+    "top": ["kwikstage", "multidirectional-system", "independent-tied"], "no_addons": ["protection-fan"] },
+  { "say": "Painting a house but not occupied and no public around",
+    "has": ["facade", "low"], "lacks": ["weather", "public_below"] },
+  { "say": "Something about scaffolding", "top": [], "asks": "work" }
+]

@@ -1,0 +1,6 @@
+# Changes need approval from the team that owns that content.
+# Replace these placeholder team names with real GitHub teams or usernames.
+/content/systems/   @your-org/design-office
+/content/guidance/  @your-org/sheq
+/content/projects/  @your-org/contracts
+/hub/ /templates/ /.github/  @your-org/hub-maintainers

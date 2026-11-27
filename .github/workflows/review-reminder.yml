@@ -1,0 +1,40 @@
+# Keeps the hub current: every Monday, list pages past their review date in a
+# single GitHub issue (created once, then updated) for page owners to act on.
+# The site itself works out "review due" badges in the browser, so they're always current.
+name: Weekly review reminder
+
+on:
+  schedule:
+    - cron: "0 7 * * 1"   # Mondays 07:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Find overdue pages
+        run: python -m hub stale --markdown > stale.md
+      - name: Create or update the reminder issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TITLE="Content review due"
+          gh label create content-review --color F2A900 --description "Hub pages past their review date" 2>/dev/null || true
+          NUM=$(gh issue list --label content-review --state open --json number --jq '.[0].number')
+          if grep -q "Nothing to do" stale.md; then
+            [ -n "$NUM" ] && gh issue close "$NUM" --comment "All pages are back within their review dates. Thanks!"
+            exit 0
+          fi
+          if [ -n "$NUM" ]; then
+            gh issue edit "$NUM" --body-file stale.md
+          else
+            gh issue create --title "$TITLE" --label content-review --body-file stale.md
+          fi
